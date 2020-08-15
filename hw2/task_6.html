@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_6</title>
+</head>
+<body>
+    <script>
+       'use strict';
+       
+      function getlastNumber(num) {
+           return num % 10;
+       }
+       
+       
+       function getPrelastNumber(num) {
+           return (Math.floor(num/10)) % 10;
+       }
+       
+       
+       function getCorrectCase(num) {
+           let preLast = getPrelastNumber(num);
+           let correctCase = '' 
+           if (preLast == 1) {              
+               return 'рублей';
+           }
+           let last = getlastNumber(num);
+           switch(last) {
+           case 0:
+           case 5:
+           case 6:
+           case 7:
+           case 8:
+           case 9:
+               return 'рублей';
+           case 1:
+               return 'рубль';
+           case 2:
+           case 3:
+           case 4:
+               return 'рубля';  
+           }   
+       }
+       
+       let bancAccount = Number(prompt("Какое количество денег желаете положить на счёт?")); 
+       alert(`Вы пополнили счет на ${bancAccount} ${getCorrectCase(bancAccount)}.`);
+       
+      </script> 
+
+    
+</body>
+</html>

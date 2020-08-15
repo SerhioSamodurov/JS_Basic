@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task_3</title>
+</head>
+<body>
+   <script>
+       'use strict'; 
+       
+       let a = Number(prompt("введите первое число"));
+       let b = Number(prompt("введите второе число"));
+       
+       
+       
+       if (a >= 0 && b >= 0) {
+           alert(a - b);
+       } else if (a < 0 && b < 0) {
+           alert(a * b);        
+       } else if (Math.sign(a) != Math.sign(b)) {
+           alert(a + b);    
+       } 
+       
+       /*else { // через else вроде бы работает тоже правильно
+           alert(a + b);       
+       }  */     
+    </script>
+    
+</body>
+</html>
